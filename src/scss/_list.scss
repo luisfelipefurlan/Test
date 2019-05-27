@@ -1,0 +1,46 @@
+.list-container {
+  float: left;
+  height: 100%;
+  width: 300px;
+  background-color: #FEFEFE;
+  overflow: hidden;
+}
+
+.search-container {
+  height: 72px;
+  width: 100%;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+
+  .search-input {
+    height: 30px;
+    border: solid 1px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    margin: 0 16px;
+    flex: 1;
+    padding: 0 15px 0 40px;
+    line-height: 30px;
+    transition: 300ms;
+
+    &:focus {
+      border: 1px solid #4885FF;
+      box-shadow: 0 0 8px rgba(72, 133, 255, 0.2) !important;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.5);
+
+    }
+  }
+
+  .fa {
+    position: absolute;
+    left: 30px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}

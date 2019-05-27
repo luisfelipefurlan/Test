@@ -1,0 +1,125 @@
+
+%generic-input {
+  float: left;
+  position: relative;
+  color: rgba(0, 0, 0, 0.87);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 7px 15px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  transition: 300ms;
+
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+
+    &:disabled {
+      border: 1px dashed rgba(0, 0, 0, 0.2) !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &:focus {
+    border: 1px solid #4885FF;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  &:disabled {
+    border: 1px dashed rgba(0, 0, 0, 0.2) !important;
+    background: rgba(0, 0, 0, 0.12);
+  }
+}
+
+%generic-input-message {
+  position: relative;
+  margin: 8px 0 0 15px;
+  line-height: 12px;
+  height: 12px;
+  float: left;
+  width: calc(100% - 15px);
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.54);
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-field {
+  @extend %generic-input;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+}
+
+.input-container {
+  margin: 16px 8px 8px 8px;
+  width: calc(100% - 16px);
+  position: relative;
+  float: left;
+
+  .input-label {
+
+    position: absolute;
+    line-height: 40px;
+    transform: translate(16px, 0px) scale(1);
+    color: rgba(0, 0, 0, 0.7);
+
+
+    //&:hover {
+    //  animation: enter-content 20s linear;
+    //  background-color: #fbfbfb;
+    //  padding: 0 8px;
+    //  z-index: 10;
+    //  height: 20px;
+    //  line-height: 20px !important;
+    //}
+  }
+  .has-content {
+    animation: enter-content 100ms ease-in;
+    transform: translate(-2px, -11px) scale(0.75);
+    background-color: #fbfbfb;
+    z-index: 10;
+    height: 20px;
+    line-height: 20px !important;
+  }
+}
+
+
+.input-message {
+  @extend %generic-input-message;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.input-error-message {
+  @extend %generic-input-message;
+  color: rgba(227, 39, 64, 0.9);
+}
+
+.input-error {
+  border: 1px solid #e33435 !important;
+}
+
+.input-disable {
+
+}
+
+@keyframes enter-content {
+  from {
+    transform: translate(16px, 10px) scale(1);
+  }
+  to {
+    transform: translate(-2px, -11px) scale(0.75);
+  }
+}
+
+@keyframes ext-content {
+  from {
+    transform: translate(-2px, -11px) scale(0.75);
+  }
+  to {
+    transform: translate(16px, 10px) scale(1);
+  }
+}

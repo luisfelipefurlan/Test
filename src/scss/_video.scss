@@ -1,0 +1,58 @@
+//@import "cards";
+
+.camera-area {
+    margin: 6px 12px;
+    width: calc(100% - 24px);
+    height: calc(100% - 230px);
+    float: left;
+
+    .video-container {
+        border-radius: 6px;
+        background-color: #212121;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        object-fit: cover;
+    }
+}
+
+.data-container {
+    .alarms-area {
+        @extend %generic-card;
+        width: calc(100% - 24px);
+        height: 200px;
+        float: left;
+        overflow-x: auto;
+        overflow-x: overlay;
+        overflow-y: hidden;
+        margin: 9px 12px;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+}
+
+.alarm-content {
+    margin: 8px 6px;
+    height: calc(100% - 16px);
+    width: 160px;
+    display: inline-block;
+
+    .alarm-image {
+        float: left;
+        margin: 0 5px 5px 5px;
+        width: calc(50% - 10px);
+        height: 80px;
+        border-radius: 3px;
+        background-color: #555555;
+    }
+
+    .alarm-text {
+        float: left;
+        width: calc(100% - 10px);
+        margin:  5px;
+        font-family: "Open Sans", 'Roboto', sans-serif;
+        font-size: 0.875rem;
+        color: #555555;
+        white-space: pre-line;
+    }
+}

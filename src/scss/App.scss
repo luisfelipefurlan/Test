@@ -1,0 +1,149 @@
+@import "login";
+@import "fileds";
+@import "buttons";
+@import "menu";
+@import "header";
+@import "list";
+@import "details";
+@import "fonts";
+@import "charts";
+@import "dashboard";
+@import "forecast";
+@import "dropdown";
+@import "reports";
+@import "video";
+@import "alarmHistoric";
+
+*:focus {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box !important;
+    font-family: "Open Sans", 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+%bg {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+}
+
+.app-bg {
+    @extend %bg;
+}
+
+.app-bg-center {
+    @extend %bg;
+    justify-content: center;
+    align-items: center;
+    //background: #FBFBFB;
+    background: linear-gradient(180deg, #52D5FD 0%, #40C3EB 100%);
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.content-container {
+    height: 100%;
+    width: calc(100% - 4rem);
+    float: left;
+    overflow: hidden;
+    background-color: #F5F5F5;
+}
+
+.data-container {
+    float: left;
+    height: 100%;
+    width: calc(100% - 300px);
+    padding: 12px;
+    overflow-y: auto;
+    overflow-y: overlay;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: #B3B3B3;
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.spinner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

@@ -1,0 +1,106 @@
+@import "cards";
+
+%generic-segment {
+    margin: 16px 8px 8px 8px;
+    width: 100%;
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    min-height: 50px;
+    padding: 8px;
+    position: relative;
+}
+
+.report-card {
+    @extend %generic-card;
+    height: calc(100% - 24px);
+    width: calc(45% - 24px);
+    float: left;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+
+    .flex-half-item {
+        flex: 1;
+        width: 50%;
+        min-width: 230px;
+    }
+
+    .flex-full-item {
+        flex: 2;
+        width: 100%;
+        min-width: 100%;
+        z-index: 10;
+    }
+
+    .outline-btn {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        width: calc(100% - 38px);
+    }
+}
+
+.segment-area {
+    @extend %generic-segment;
+
+    .segment-label {
+        position: absolute;
+        transform: translate(-9px, -18px) scale(0.75);
+        background-color: #fbfbfb;
+        padding: 0 8px;
+        z-index: 2;
+        height: 20px;
+        line-height: 20px !important;
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.preview-card {
+    @extend %generic-card;
+    height: calc(100% - 24px);
+    width: calc(55% - 24px);
+    float: left;
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+    overflow-y: auto;
+    overflow-y: overlay;
+}
+
+.segment-info {
+    @extend %generic-segment;
+
+    .segment-label {
+        position: absolute;
+        transform: translate(0, -18px);
+        background-color: #FDFDFD;
+        padding: 0 8px;
+        z-index: 2;
+        height: 20px;
+        line-height: 20px !important;
+        font-size: 0.75rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    .segment-grid {
+        width: 100%;
+        height: calc(100% - 24px);
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr;
+        margin: 14px 0;
+
+        .grid-cell {
+            text-align: center;
+            padding: 2px 14px;
+            color: #555555;
+            font-size: 0.8vw;
+        }
+    }
+}

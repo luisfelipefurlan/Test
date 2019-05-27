@@ -1,0 +1,14 @@
+{
+    "admin": [
+        {
+            "path": "/historic",
+            "component": "alarmHistoric",
+            "icon": "fas fa-history"
+        },
+        {
+            "path": "*",
+            "component": "alarmHistoric"
+        }
+    ],
+    "default": []
+}

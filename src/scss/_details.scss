@@ -1,0 +1,40 @@
+@import "cards";
+
+.weather-card {
+  @extend %generic-card;
+  width: calc(100% - 24px);
+  display: flex;
+  flex-wrap: wrap;
+
+  .info-area {
+    min-width: 180px;
+    flex: 1;
+    height: 110px;
+    font-family: "Open Sans", 'Roboto', sans-serif;
+    font-weight: lighter;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+
+    .middle-info {
+      height: fit-content;
+      max-width: fit-content;
+
+      .info-value {
+        width: 100%;
+        font-size: 36px;
+        color: rgba(0, 0, 0, 0.87);
+        text-align: right;
+      }
+
+      .info-desc {
+        width: 100%;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: right;
+      }
+    }
+  }
+}

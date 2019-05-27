@@ -1,0 +1,223 @@
+$wide-screen-height: calc((44vw - (64px * 0.44) - 32px) * 0.5625);
+$wide-screen-width: calc(44vw - (64px * 0.44) - 32px);
+
+.filter-bar {
+    float: left;
+    display: flex;
+    height: 78px;
+    width: 100%;
+    padding: 6px 16px;
+    background-color: #FCFCFC;
+}
+
+.cards-area {
+    float: left;
+    height: calc(100% - 78px);
+    width: 100%;
+    padding: 14px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.alarm-historic-card {
+    @extend %generic-card;
+    height: fit-content;
+    min-width: 230px;
+    max-width: 330px;
+    flex: 1;
+    display: inherit;
+    flex-wrap: inherit;
+    justify-content: center;
+    padding: 8px;
+    transition: all 200ms;
+    cursor: pointer;
+
+    &:hover {
+        border: solid 1px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .alarm-image {
+        height: 170px;
+        width: calc(100% - 14px);
+        margin: 7px;
+        border-radius: 3px;
+        background-color: #333333;
+        object-fit: contain;
+    }
+
+
+}
+
+.text-area {
+    float: left;
+    width: 100%;
+    margin: 7px;
+    font-family: "Open Sans", 'Roboto', sans-serif;
+    font-size: 16px;
+
+    .value-area {
+        font-weight: 600;
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+    }
+
+    .title-area {
+        font-size: 0.875rem;
+        color: rgba(0, 0, 0, 0.55);
+        letter-spacing: 0.05em;
+        user-select: none;
+        text-transform: capitalize;
+    }
+}
+
+.select-margin {
+    margin: 16px 8px 8px 8px;
+    width: calc(100% - 16px);
+}
+
+.one-space {
+    flex: 1;
+}
+
+.two-spaces {
+    flex: 2;
+}
+
+.three-spaces {
+    flex: 3;
+}
+
+.four-spaces {
+    flex: 4;
+}
+
+.five-spaces {
+    flex: 5;
+}
+
+.page-overlay {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 64px;
+    top: 0;
+    background-color: #FCFCFC;
+    z-index: 999999;
+    padding: 12px;
+
+    .upper-page {
+        float: left;
+        width: 100%;
+        height: calc((44vw - (64px * 0.44) + 11px) * 0.5625);
+
+        .alarm-print {
+            object-fit: cover;
+            border-radius: 6px;
+            float: left;
+            width: $wide-screen-width;
+            height: $wide-screen-height;
+            background: #333333;
+            margin: 12px;
+        }
+
+        .alarm-face {
+            object-fit: fill;
+            border-radius: 6px;
+            float: left;
+            width: calc(28vw - (64px * 0.28) - 32px);
+            height: $wide-screen-height;
+            margin: 12px;
+            background: #333333;
+        }
+
+        .spinner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            width: calc(28vw - (64px * 0.28) - 32px);
+            height: $wide-screen-height;
+            margin: 12px;
+            background: #333333;
+            float: left;
+        }
+
+        .empty {
+            padding: 20px;
+            object-fit: contain;
+        }
+    }
+
+    .middle-page {
+        float: left;
+        width: 100%;
+        height: calc(100vh - ((44vw - (64px * 0.44) + 11px) * 0.5625) - 80px);
+
+        .print-info {
+            float: left;
+            //margin: 12px;
+            width: calc(44vw - (64px * 0.44) - 8px);;
+            height: 100%;
+            //background-color: #ff2d55;
+            .text-area {
+                min-width: 300px;
+                width: calc(50% - 24px);
+                margin: 12px;
+            }
+        }
+
+        .alarm-info {
+            float: left;
+            overflow: auto;
+            overflow: overlay;
+            //margin: 12px;
+            width: calc(56vw - (64px * 0.56) - 16px);
+            height: 100%;
+            //background-color: #2b67b6;
+            .match-area {
+                font-family: Mandatory;
+                float: left;
+                margin: 12px;
+                width: calc(50% - 24px);
+                height: 44px;
+                text-align: center;
+                line-height: 44px;
+                font-size: 1.5rem;
+                color: #333333;
+                background-color: #CECECE;
+                border-radius: 6px;
+            }
+
+            .text-area {
+                width: calc(50% - 24px);
+                margin: 12px;
+            }
+        }
+    }
+
+    .bottom-page {
+        height: 56px;
+        width: 100%;
+        float: right;
+
+        .btn-alarm-info {
+            float: right;
+            width: 160px;
+
+            .outline-btn {
+                margin: 8px 12px;
+                width: calc(100% - 24px);
+            }
+        }
+    }
+}
+
+
+

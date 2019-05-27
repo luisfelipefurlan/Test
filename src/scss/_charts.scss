@@ -1,0 +1,67 @@
+@import "cards";
+
+.chart-card {
+  @extend %generic-card;
+  width: calc(100% - 24px);
+}
+
+.chart-card--no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  font-size: 24px;
+  color: #838383;
+  font-weight: 300;
+  user-select: none;
+}
+
+.chart-header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+}
+
+.chart-header-button {
+  display: flex;
+  width: 120px;
+  height: 48px;
+  font-family: Open Sans, sans-serif;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  color: #464646;
+  margin-bottom: 10px;
+  transition: 250ms all;
+  &:hover{
+    background-color: rgba(0,0,0,0.08);
+  }
+}
+
+.chart-header-select {
+  border-bottom: 2px solid rgba(3, 113, 146, 1);
+  color: #037192;
+  font-weight: 500;
+}
+
+.chart-content {
+  padding: 5px;
+  height: 360px;
+  width: 100%;
+}
+
+.custom-tooltip{
+  background-color: rgba(255,255,255,0.65);
+  padding: 0 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 6px;
+  font-family: "Open Sans",'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.chart-container{
+  padding: 12px;
+  height: 362px;
+  width: 100%;
+}
