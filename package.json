@@ -40,7 +40,7 @@
     "leaflet": "^1.4.0",
     "lodash": "^4.17.11",
     "mini-css-extract-plugin": "0.4.3",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "node-sass": "^4.11.0",
     "npm-font-open-sans": "^1.1.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
